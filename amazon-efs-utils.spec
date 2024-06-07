@@ -172,9 +172,6 @@ fi
 - Check for efs-proxy PIDs when cleaning tunnel state files
 - Add PID to log entries
 
-* Mon Apr 23 2024 Ryan Stankiewicz <rjstank@amazon.com> - 2.0.1
-- Disable Nagle's algorithm for efs-proxy TLS mounts to improve latencies 
-
 * Mon Apr 08 2024 Ryan Stankiewicz <rjstank@amazon.com> - 2.0.0
 - Replace stunnel, which provides TLS encryptions for mounts, with efs-proxy, a component built in-house at AWS. Efs-proxy lays the foundation for upcoming feature launches at EFS. 
 
@@ -195,12 +192,6 @@ fi
 - Support MacOS Ventura, Oracle8 distribution
 - Add debug statement for size of state file write
 - Add parameters in mount options for assume web role with web identity
-
-* Wed Jan 1 2023 Ryan Stankiewicz <rjstank@amazon.com> - 1.34.5
-- Watchdog detect empty private key and regenerate
-- Update man page
-- Avoid redundant get_target_region call
-- Handle invalid mount point name
 
 * Tue Dec 13 2022 Ryan Stankiewicz <rjstank@amazon.com> - 1.34.4
 - Fix potential tlsport selection collision by using state file as tlsport lock file.
